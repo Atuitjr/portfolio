@@ -1,9 +1,10 @@
 import React from 'react';
+import AboutMe from './pages/AboutMe';
 
 function App() {
     return (
         <div>
-            <h1>asida</h1>
+            <AboutMe />
         </div>
     );
 }
