@@ -11,21 +11,21 @@ const Projects = () => {
             <Project>
                 <h2>First one</h2>
                 <div className='line'></div>
-                <Link to='/'>
+                <Link to='/projects/the-athlete'>
                     <img src={athlete} alt='athlete' />
                 </Link>
             </Project>
             <Project>
                 <h2>Second one</h2>
                 <div className='line'></div>
-                <Link to='/'>
+                <Link to='/projects/the-racer'>
                     <img src={theracer} alt='theracer' />
                 </Link>
             </Project>
             <Project>
                 <h2>third one</h2>
                 <div className='line'></div>
-                <Link to='/'>
+                <Link to='/projects/good-times'>
                     <img src={goodtimes} alt='goodtimes' />
                 </Link>
             </Project>
