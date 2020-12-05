@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { ProjectState } from '../movieState';
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 
 const ProjectDetail = () => {
     const history = useHistory();
@@ -21,7 +23,12 @@ const ProjectDetail = () => {
     return (
         <>
             {project && (
-                <Details>
+                <Details
+                    variants={pageAnimation}
+                    initial='hidden'
+                    animate='show'
+                    exit='exit'
+                >
                     <HeadLine>
                         <h2>{project.title}</h2>
                         <img src={project.mainImg} alt={project.title} />
@@ -40,7 +47,7 @@ const ProjectDetail = () => {
     );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
     color: white;
 `;
 
