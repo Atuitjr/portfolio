@@ -14,6 +14,7 @@ const Projects = () => {
             initial='hidden'
             animate='show'
             exit='exit'
+            style={{ background: '#fff' }}
         >
             <Project>
                 <h2>First one</h2>
