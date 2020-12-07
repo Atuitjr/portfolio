@@ -13,8 +13,12 @@ import {
     sliderAnim,
     sliderContainer,
 } from '../animation';
+import { useScroll } from '../components/useScroll';
+import { scrollReveal } from '../animation';
 
 const Projects = () => {
+    const [element, controls] = useScroll();
+    const [element2, controls2] = useScroll();
     return (
         <Work
             variants={pageAnimation}
@@ -42,16 +46,26 @@ const Projects = () => {
                     </Hide>
                 </Link>
             </Project>
-            <Project>
+            <Project
+                variants={scrollReveal}
+                animate={controls}
+                initial='hidden'
+                ref={element}
+            >
                 <h2>Second one</h2>
-                <div className='line'></div>
+                <motion.div variants={lineAnim} className='line'></motion.div>
                 <Link to='/projects/the-racer'>
                     <img src={theracer} alt='theracer' />
                 </Link>
             </Project>
-            <Project>
+            <Project
+                variants={scrollReveal}
+                animate={controls2}
+                initial='hidden'
+                ref={element2}
+            >
                 <h2>third one</h2>
-                <div className='line'></div>
+                <motion.div variants={lineAnim} className='line'></motion.div>
                 <Link to='/projects/good-times'>
                     <img src={goodtimes} alt='goodtimes' />
                 </Link>
@@ -69,7 +83,7 @@ const Work = styled(motion.div)`
     }
 `;
 
-const Project = styled.div`
+const Project = styled(motion.div)`
     padding-bottom: 10rem;
     .line {
         height: 0.5rem;
