@@ -12,7 +12,7 @@ const ContactMe = () => {
             initial='hidden'
             animate='show'
             exit='exit'
-            style={{ background: '#fff' }}
+            style={{ background: '#eeebeb' }}
         >
             <Title>
                 <Hide>
@@ -32,7 +32,13 @@ const ContactMe = () => {
                 </Hide>
                 <Hide>
                     <Social variants={titleAnim}>
-                        <Circle /> <h2>Social media</h2>
+                        <Circle />
+                        <Astyle
+                            href='https://www.linkedin.com/in/alberto-tuit-jara/'
+                            target='_blank'
+                        >
+                            <h2>LinkedIn</h2>
+                        </Astyle>
                     </Social>
                 </Hide>
             </div>
@@ -72,6 +78,10 @@ const Social = styled(motion.div)`
     h2 {
         margin: 2rem;
     }
+`;
+
+const Astyle = styled.a`
+    text-decoration: none;
 `;
 
 export default ContactMe;
