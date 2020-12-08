@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
-import { ProjectState } from '../movieState';
+import { ProjectState } from '../projectsState';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
 import ScrollTop from '../components/ScrollTop';
@@ -35,11 +35,22 @@ const ProjectDetail = () => {
                         <h2>{project.title}</h2>
                         <img src={project.mainImg} alt={project.title} />
                     </HeadLine>
-                    <Awards>
-                        {project.awards.map((award: any) => (
-                            <Award key={award.title} award={award} />
+                    <BuildIn>
+                        <BuildIcon
+                            src={project.buildIcon}
+                            alt={project.build}
+                        />
+                        <h3>{project.build}</h3>
+                        <Line />
+                    </BuildIn>
+                    <Languages>
+                        {project.languages.map((language: any) => (
+                            <Language
+                                key={language.title}
+                                language={language}
+                            />
                         ))}
-                    </Awards>
+                    </Languages>
                     <ImageDisplay>
                         <img src={project.secondaryImg} alt={project.title} />
                     </ImageDisplay>
@@ -70,10 +81,23 @@ const HeadLine = styled.div`
     }
 `;
 
-const Awards = styled.div`
-    min-height: 80vh;
+const BuildIn = styled.div`
+    min-height: 10vh;
     display: flex;
-    margin: 5rem 10rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    margin: 5rem auto 0rem auto;
+    h3 {
+        font-size: 2rem;
+    }
+`;
+
+const Languages = styled.div`
+    min-height: 60vh;
+    display: flex;
+    margin: 0rem 10rem;
     align-items: center;
     justify-content: space-around;
     @media (max-width: 1300px) {
@@ -82,21 +106,37 @@ const Awards = styled.div`
     }
 `;
 
-const AwardStyle = styled.div`
+const Line = styled.div`
+    width: 100%;
+    background: #23d997;
+    height: 0.5rem;
+    margin: 1rem 0rem;
+`;
+
+const LanguageStyle = styled.div`
     padding: 5rem;
+    .row {
+        display: flex;
+        justify-content: center;
+    }
     h3 {
         font-size: 2rem;
-    }
-    .line {
-        width: 100%;
-        background: #23d997;
-        height: 0.5rem;
-        margin: 1rem 0rem;
     }
     p {
         padding: 2rem 0rem;
     }
 `;
+
+const BuildIcon = styled.img`
+    width: 5rem;
+    height: 5rem;
+`;
+
+const LanguageIcon = styled.img`
+    width: 3rem;
+    height: 3rem;
+`;
+
 const ImageDisplay = styled.div`
     min-height: 50vh;
     img {
@@ -106,13 +146,16 @@ const ImageDisplay = styled.div`
     }
 `;
 
-const Award = ({ award }: any) => {
+const Language = ({ language }: any) => {
     return (
-        <AwardStyle>
-            <h3>{award.title}</h3>
-            <div className='line'></div>
-            <p>{award.description}</p>
-        </AwardStyle>
+        <LanguageStyle>
+            <div className='row'>
+                <LanguageIcon src={language.icon} alt={language.title} />
+                <h3>{language.title}</h3>
+            </div>
+            <Line />
+            <p>{language.description}</p>
+        </LanguageStyle>
     );
 };
 

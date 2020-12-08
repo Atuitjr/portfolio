@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import athlete from '../img/athlete-small.png';
-import theracer from '../img/theracer-small.png';
-import goodtimes from '../img/goodtimes-small.png';
+import portfolio from '../img/athlete-small.png';
+import musicPlayer from '../img/reactMusicPlayer.png';
+import spotifyProfile from '../img/spotifyProfile.png';
 import { motion } from 'framer-motion';
 import {
     pageAnimation,
@@ -15,6 +15,7 @@ import {
 } from '../animation';
 import { useScroll } from '../components/useScroll';
 import { scrollReveal } from '../animation';
+import ScrollTop from '../components/ScrollTop';
 
 const Projects = () => {
     const [element, controls] = useScroll();
@@ -25,8 +26,9 @@ const Projects = () => {
             initial='hidden'
             animate='show'
             exit='exit'
-            style={{ background: '#fff' }}
+            style={{ background: '#eeebeb' }}
         >
+            <ScrollTop />
             <motion.div variants={sliderContainer}>
                 <Frame1 variants={sliderAnim} />
                 <Frame2 variants={sliderAnim} />
@@ -34,14 +36,14 @@ const Projects = () => {
                 <Frame4 variants={sliderAnim} />
             </motion.div>
             <Project>
-                <motion.h2 variants={fadeAnim}>First one</motion.h2>
+                <motion.h2 variants={fadeAnim}>Portfolio</motion.h2>
                 <motion.div variants={lineAnim} className='line'></motion.div>
-                <Link to='/projects/the-athlete'>
+                <Link to='/projects/portfolio'>
                     <Hide>
                         <motion.img
                             variants={photoAnim}
-                            src={athlete}
-                            alt='athlete'
+                            src={portfolio}
+                            alt='portfolio'
                         />
                     </Hide>
                 </Link>
@@ -52,10 +54,10 @@ const Projects = () => {
                 initial='hidden'
                 ref={element}
             >
-                <h2>Second one</h2>
+                <h2>React Music player</h2>
                 <motion.div variants={lineAnim} className='line'></motion.div>
-                <Link to='/projects/the-racer'>
-                    <img src={theracer} alt='theracer' />
+                <Link to='/projects/musicPlayer'>
+                    <img src={musicPlayer} alt='musicPlayer' />
                 </Link>
             </Project>
             <Project
@@ -64,10 +66,10 @@ const Projects = () => {
                 initial='hidden'
                 ref={element2}
             >
-                <h2>third one</h2>
+                <h2>Spotify Profile</h2>
                 <motion.div variants={lineAnim} className='line'></motion.div>
-                <Link to='/projects/good-times'>
-                    <img src={goodtimes} alt='goodtimes' />
+                <Link to='/projects/spotifyProfile'>
+                    <img src={spotifyProfile} alt='spotifyProfile' />
                 </Link>
             </Project>
         </Work>
