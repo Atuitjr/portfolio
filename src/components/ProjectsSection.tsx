@@ -1,9 +1,9 @@
 import React from 'react';
-import clock from '../img/clock.svg';
-import diaphragm from '../img/diaphragm.svg';
-import money from '../img/money.svg';
-import teamwork from '../img/teamwork.svg';
-import home2 from '../img/home2.png';
+import react from '../img/react.svg';
+import vue from '../img/vue.svg';
+import javascript from '../img/javascript.svg';
+import html from '../img/html.svg';
+import home2 from '../img/htmlCode.png';
 
 import styled from 'styled-components';
 import { useScroll } from './useScroll';
@@ -23,36 +23,36 @@ const ProjectsSection = () => {
         >
             <Description>
                 <h2>
-                    High <span>quality</span> projects
+                    High <span>quality</span> projects made in:
                 </h2>
                 <Cards>
                     <Card>
                         <div className='icon'>
-                            <img src={clock} alt='a clock' />
-                            <h3>Efficient</h3>
+                            <SvgStyled src={react} alt='React' />
+                            <h3>React. JS</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>A javascript library.</p>
                     </Card>
                     <Card>
                         <div className='icon'>
-                            <img src={teamwork} alt='teamwork' />
-                            <h3>Teamwork</h3>
+                            <SvgStyled src={html} alt='HTML' />
+                            <h3>HTML</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>HyperText Markup Language.</p>
                     </Card>
                     <Card>
                         <div className='icon'>
-                            <img src={diaphragm} alt='diaphragm' />
-                            <h3>Diaphragm</h3>
+                            <SvgStyled src={vue} alt='Vue' />
+                            <h3>Vue. Js</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>A Javascript framework.</p>
                     </Card>
                     <Card>
                         <div className='icon'>
-                            <img src={money} alt='money' />
-                            <h3>Affordable</h3>
+                            <SvgStyled src={javascript} alt='JS' />
+                            <h3>Javascript</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Es6 standard Javascript.</p>
                     </Card>
                 </Cards>
             </Description>
@@ -93,6 +93,11 @@ const Card = styled.div`
             padding: 1rem;
         }
     }
+`;
+
+const SvgStyled = styled.img`
+    width: 3rem;
+    height: 3rem;
 `;
 
 export default ProjectsSection;

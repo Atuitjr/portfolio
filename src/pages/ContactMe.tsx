@@ -33,12 +33,13 @@ const ContactMe = () => {
                 <Hide>
                     <Social variants={titleAnim}>
                         <Circle />
-                        <Astyle
+                        <AStyle
                             href='https://www.linkedin.com/in/alberto-tuit-jara/'
                             target='_blank'
+                            rel='noreferrer'
                         >
                             <h2>LinkedIn</h2>
-                        </Astyle>
+                        </AStyle>
                     </Social>
                 </Hide>
             </div>
@@ -80,8 +81,9 @@ const Social = styled(motion.div)`
     }
 `;
 
-const Astyle = styled.a`
+const AStyle = styled.a`
     text-decoration: none;
+    color: #353535;
 `;
 
 export default ContactMe;

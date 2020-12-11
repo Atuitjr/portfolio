@@ -20,47 +20,54 @@ const FaqSection = () => {
                 Any questions <span>FAQ</span>
             </h2>
             <AnimateSharedLayout>
-                <Toggle title='how do i start?'>
+                <Toggle title='Tell us a bit about you.'>
                     <div className='answer'>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing.
+                            I'm Alberto Tuit, a fullstack developer sited in
+                            Asturias (Northern Spain). Born in Terneuzen (The
+                            Netherlands), and raised up in Spain.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
+                            Passionate about developing solutions for others i
+                            started studying web development. Nowadays i Work
+                            in:
                         </p>
-                    </div>
-                </Toggle>
-                <Toggle title='Daily schedule.'>
-                    <div className='answer'>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
-                        </p>
-                    </div>
-                </Toggle>
-                <Toggle title='What technologies do i use.'>
-                    <div className='answer'>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
-                        </p>
+                        <ul>
+                            <p>Front End:</p>
+                            <ul>
+                                <li>React</li>
+                                <li>Javascript</li>
+                                <li>Vue (IN PROCESS)</li>
+                            </ul>
+                            <p>Back End:</p>
+                            <ul>
+                                <li>Node JS</li>
+                                <li>Python</li>
+                            </ul>
+                        </ul>
                     </div>
                 </Toggle>
                 <Toggle title='What can i offer.'>
                     <div className='answer'>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing.
+                            I can offer years of background experience. See my
+                            personal projects for more information.
                         </p>
+                    </div>
+                </Toggle>
+                <Toggle title='How can you contact me.'>
+                    <div className='answer'>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
+                            You can visit me via my{' '}
+                            <AStyle
+                                href='https://www.linkedin.com/in/alberto-tuit-jara/'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                LinkedIn
+                            </AStyle>{' '}
+                            page. Or sending me a e-mail to:
+                            albertotuitjara@gmail.com.
                         </p>
                     </div>
                 </Toggle>
@@ -68,6 +75,11 @@ const FaqSection = () => {
         </FAQ>
     );
 };
+
+const AStyle = styled.a`
+    text-decoration: none;
+    color: #23d977;
+`;
 
 const FAQ = styled(About)`
     display: block;

@@ -10,7 +10,7 @@ const Nav = () => {
         <StyledNav>
             <h1>
                 <Link id='logo' to='/'>
-                    Capture
+                    A.Tuit
                 </Link>
             </h1>
             <ul>
@@ -23,7 +23,7 @@ const Nav = () => {
                     />
                 </li>
                 <li>
-                    <Link to='/projects'>2. The projecs</Link>
+                    <Link to='/projects'>2. The projects</Link>
                     <Line
                         transition={{ duration: 0.75 }}
                         initial={{ width: '0%' }}

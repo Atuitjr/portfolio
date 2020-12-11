@@ -3,7 +3,9 @@ import home1 from '../img/home1.png';
 import { About, Description, Hide, Image } from '../styles';
 import { motion } from 'framer-motion';
 import { titleAnim, fadeAnim, photoAnim } from '../animation';
+import { Link } from 'react-router-dom';
 import Wave from './Wave';
+import styled from 'styled-components';
 
 const AboutSection = () => {
     return (
@@ -25,9 +27,11 @@ const AboutSection = () => {
                     </Hide>
                 </motion.div>
                 <motion.p variants={fadeAnim}>
-                    Contact me to develop any idea.
+                    Contact me if you have any idea.
                 </motion.p>
-                <motion.button variants={fadeAnim}>Contact me</motion.button>
+                <motion.button variants={fadeAnim}>
+                    <StyledLink to='/contact'>Contact me</StyledLink>
+                </motion.button>
             </Description>
             <Image>
                 <motion.img
@@ -40,5 +44,10 @@ const AboutSection = () => {
         </About>
     );
 };
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: white;
+`;
 
 export default AboutSection;
