@@ -98,13 +98,13 @@ const Details = styled(motion.div)`
 
 const HeadLine = styled.div`
     min-height: 90vh;
-    padding-top: 20vh;
+    padding-top: 3rem;
     position: relative;
+    text-align: center;
     h2 {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -10%);
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3rem;
     }
     img {
         width: 100%;
