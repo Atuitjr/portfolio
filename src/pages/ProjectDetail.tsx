@@ -10,6 +10,7 @@ const ProjectDetail = () => {
     const history = useHistory();
     const url = history.location.pathname;
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [projects, setProjects] = useState(ProjectState);
 
     const [project, setProject] = useState<any>(null);
