@@ -37,6 +37,11 @@ export const ProjectState = () => {
                     icon: sass,
                 },
             ],
+            links: {
+                github: 'https://github.com/Atuitjr/portfolio',
+                web: 'https://albertotuitjara.tk',
+            },
+            description: 'A portfolio build in react',
         },
         {
             title: 'React Music player',
@@ -62,6 +67,12 @@ export const ProjectState = () => {
                     icon: sass,
                 },
             ],
+            links: {
+                github: 'https://github.com/Atuitjr/react-music-player',
+                web: 'https://tuit-react-music-player.netlify.app/',
+            },
+            description:
+                'A music player with music with no Copyright build in react',
         },
         {
             title: 'Spotify Profile',
@@ -87,6 +98,11 @@ export const ProjectState = () => {
                     icon: javascript,
                 },
             ],
+            links: {
+                github: 'https://github.com/Atuitjr/spotify-profile',
+                web: '',
+            },
+            description: 'A spotify profile build in react',
         },
     ];
 };

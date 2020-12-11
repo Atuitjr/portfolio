@@ -5,6 +5,8 @@ import { ProjectState } from '../projectsState';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
 import ScrollTop from '../components/ScrollTop';
+import github from '../img/github.svg';
+import web from '../img/web.svg';
 
 const ProjectDetail = () => {
     const history = useHistory();
@@ -52,6 +54,35 @@ const ProjectDetail = () => {
                             />
                         ))}
                     </Languages>
+                    <Description>{project.description}</Description>
+                    <AppsLinks>
+                        <a
+                            href={project.links.github}
+                            className='link'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <h3>GITHUB</h3>
+                            <LanguageIcon
+                                src={github}
+                                alt='Github'
+                            ></LanguageIcon>
+                        </a>
+                        {project.links.web !== '' && (
+                            <a
+                                href={project.links.web}
+                                className='link'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <h3>APP</h3>
+                                <LanguageIcon
+                                    src={web}
+                                    alt='to page'
+                                ></LanguageIcon>
+                            </a>
+                        )}
+                    </AppsLinks>
                     <ImageDisplay>
                         <img src={project.secondaryImg} alt={project.title} />
                     </ImageDisplay>
@@ -82,6 +113,27 @@ const HeadLine = styled.div`
     }
 `;
 
+const AppsLinks = styled.div`
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    .link {
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        text-decoration: none;
+        h3 {
+            color: #23d997;
+        }
+    }
+`;
+
+const Description = styled.div`
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5rem;
+`;
+
 const BuildIn = styled.div`
     min-height: 10vh;
     display: flex;
@@ -96,9 +148,9 @@ const BuildIn = styled.div`
 `;
 
 const Languages = styled.div`
-    min-height: 60vh;
+    min-height: 40vh;
     display: flex;
-    margin: 0rem 10rem;
+    margin: 0rem 5rem;
     align-items: center;
     justify-content: space-around;
     @media (max-width: 1300px) {
