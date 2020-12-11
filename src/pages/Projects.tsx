@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import portfolio from '../img/athlete-small.png';
+import portfolio from '../img/portfolio.png';
 import musicPlayer from '../img/reactMusicPlayer.png';
 import spotifyProfile from '../img/spotifyProfile.png';
 import { motion } from 'framer-motion';

@@ -1,8 +1,8 @@
 //Import Images
-import portfolio from './img/athlete-small.png';
+import portfolioIm from './img/portfolio.png';
 import musicPlayer from './img/reactMusicPlayer.png';
 import spotifyProfile from './img/spotifyProfile.png';
-import portfolio2 from './img/athlete2.png';
+import portfolioIm2 from './img/portfolio2.png';
 import musicPlayer2 from './img/reactMusicPlayer2.png';
 import spotifyProfile2 from './img/spotifyProfile2.png';
 import react from './img/react.svg';
@@ -15,8 +15,8 @@ export const ProjectState = () => {
     return [
         {
             title: 'The portfolio v1.',
-            mainImg: portfolio,
-            secondaryImg: portfolio2,
+            mainImg: portfolioIm,
+            secondaryImg: portfolioIm2,
             url: '/projects/portfolio',
             build: 'React',
             buildIcon: react,
