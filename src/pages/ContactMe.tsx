@@ -68,6 +68,8 @@ const Title = styled.div`
 
 const Circle = styled.div`
     border-radius: 50%;
+    min-width: 3rem;
+    min-height: 3rem;
     width: 3rem;
     height: 3rem;
     background: #353535;
