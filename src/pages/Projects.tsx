@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import portfolio from '../img/portfolio.png';
 import musicPlayer from '../img/reactMusicPlayer.png';
 import spotifyProfile from '../img/spotifyProfile.png';
+import ignite from '../img/ignite.png';
 import { motion } from 'framer-motion';
 import {
     pageAnimation,
@@ -20,6 +21,7 @@ import ScrollTop from '../components/ScrollTop';
 const Projects = () => {
     const [element, controls] = useScroll();
     const [element2, controls2] = useScroll();
+    const [element3, controls3] = useScroll();
     return (
         <Work
             variants={pageAnimation}
@@ -65,6 +67,18 @@ const Projects = () => {
                 animate={controls2}
                 initial='hidden'
                 ref={element2}
+            >
+                <h2>Ignite</h2>
+                <motion.div variants={lineAnim} className='line'></motion.div>
+                <Link to='/projects/ignite'>
+                    <img src={ignite} alt='ignite' />
+                </Link>
+            </Project>
+            <Project
+                variants={scrollReveal}
+                animate={controls3}
+                initial='hidden'
+                ref={element3}
             >
                 <h2>Spotify Profile</h2>
                 <motion.div variants={lineAnim} className='line'></motion.div>

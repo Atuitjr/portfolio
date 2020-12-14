@@ -5,6 +5,8 @@ import spotifyProfile from './img/spotifyProfile.png';
 import portfolioIm2 from './img/portfolio2.png';
 import musicPlayer2 from './img/reactMusicPlayer2.png';
 import spotifyProfile2 from './img/spotifyProfile2.png';
+import ignite from './img/ignite.png';
+import ignite2 from './img/ignite2.png';
 import react from './img/react.svg';
 import typescript from './img/typescript.svg';
 import html from './img/html.svg';
@@ -103,6 +105,36 @@ export const ProjectState = () => {
                 web: '',
             },
             description: 'A spotify profile build in react',
+        },
+        {
+            title: 'Ignite',
+            mainImg: ignite,
+            url: '/projects/ignite',
+            secondaryImg: ignite2,
+            build: 'React',
+            buildIcon: react,
+            languages: [
+                {
+                    title: 'Typescript.',
+                    description: '“87.4%”',
+                    icon: typescript,
+                },
+                {
+                    title: 'HTML.',
+                    description: '“9.4%”',
+                    icon: html,
+                },
+                {
+                    title: 'Javascript.',
+                    description: '“3.2%”',
+                    icon: javascript,
+                },
+            ],
+            links: {
+                github: 'https://github.com/Atuitjr/react_ignite',
+                web: 'https://tuit-ignite.netlify.app',
+            },
+            description: 'A SPA build in react which uses a gaming API',
         },
     ];
 };
