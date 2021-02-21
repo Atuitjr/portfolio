@@ -18,7 +18,10 @@ body{
 }
 
 .Container{
-  overflow-x: hidden;
+  overflow-x: visible;
+  @media (max-width: 700px){
+    overflow-x: hidden;
+  } 
 }
 
 button{
