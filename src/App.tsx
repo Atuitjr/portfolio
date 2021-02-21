@@ -14,22 +14,24 @@ function App() {
         <div>
             <GlobalStyle />
             <Nav />
-            <AnimatePresence exitBeforeEnter>
-                <Switch location={location} key={location.pathname}>
-                    <Route path='/' exact>
-                        <AboutMe />
-                    </Route>
-                    <Route path='/projects' exact>
-                        <Projects />
-                    </Route>
-                    <Route path='/projects/:id'>
-                        <ProjectDetail />
-                    </Route>
-                    <Route path='/contact'>
-                        <ContactMe />
-                    </Route>
-                </Switch>
-            </AnimatePresence>
+            <div className='Container'>
+                <AnimatePresence exitBeforeEnter>
+                    <Switch location={location} key={location.pathname}>
+                        <Route path='/' exact>
+                            <AboutMe />
+                        </Route>
+                        <Route path='/projects' exact>
+                            <Projects />
+                        </Route>
+                        <Route path='/projects/:id'>
+                            <ProjectDetail />
+                        </Route>
+                        <Route path='/contact'>
+                            <ContactMe />
+                        </Route>
+                    </Switch>
+                </AnimatePresence>
+            </div>
         </div>
     );
 }
