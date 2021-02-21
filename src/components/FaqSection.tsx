@@ -36,14 +36,25 @@ const FaqSection = () => {
                             <p>Front End:</p>
                             <ul>
                                 <li>React</li>
+                                <li>redux</li>
                                 <li>Javascript</li>
-                                <li>Vue (IN PROCESS)</li>
+                                <li>Html</li>
+                                <li>Css</li>
                             </ul>
                             <p>Back End:</p>
                             <ul>
                                 <li>Node JS</li>
                                 <li>Python</li>
+                                <li>Django</li>
                             </ul>
+                        </ul>
+                    </div>
+                </Toggle>
+                <Toggle title='What have in mind to study this 2021.'>
+                    <div className='answer'>
+                        <ul>
+                            <li>Next .JS</li>
+                            <li>Svelte</li>
                         </ul>
                     </div>
                 </Toggle>
