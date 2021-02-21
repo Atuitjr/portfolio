@@ -22,16 +22,6 @@ const ContactMe = () => {
             <div>
                 <Hide>
                     <Social variants={titleAnim}>
-                        <Circle /> <h2>Send me a message</h2>
-                    </Social>
-                </Hide>
-                <Hide>
-                    <Social variants={titleAnim}>
-                        <Circle /> <h2>Send me an email</h2>
-                    </Social>
-                </Hide>
-                <Hide>
-                    <Social variants={titleAnim}>
                         <Circle />
                         <AStyle
                             href='https://www.linkedin.com/in/alberto-tuit-jara/'
