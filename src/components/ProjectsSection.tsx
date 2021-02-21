@@ -1,6 +1,6 @@
 import React from 'react';
 import react from '../img/react.svg';
-import vue from '../img/vue.svg';
+import css from '../img/css.svg';
 import javascript from '../img/javascript.svg';
 import html from '../img/html.svg';
 import home2 from '../img/htmlCode.png';
@@ -42,8 +42,8 @@ const ProjectsSection = () => {
                     </Card>
                     <Card>
                         <div className='icon'>
-                            <SvgStyled src={vue} alt='Vue' />
-                            <h3>Vue. Js</h3>
+                            <SvgStyled src={css} alt='Vue' />
+                            <h3>Css</h3>
                         </div>
                         <p>A Javascript framework.</p>
                     </Card>
